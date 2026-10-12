@@ -1,60 +1,60 @@
 config:
   credentials: []
   project_repos:
-    bitbucket.org/cessda/cessda.cvs.userguide:
-      branch: master
-      repo: https://bitbucket.org/cessda/cessda.cvs.userguide
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.7
+      branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.cvs.userguide:
+      branch: main
+      repo: https://github.com/cessda/cessda.cvs.userguide
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      bitbucket.org/cessda/cessda.cvs.userguide git:
+      github.com/cessda/cessda.cvs.userguide git:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-red-frog.sh
-        container: qc.acc_homey-yellow-goat
+        - /usr/bin/env sh .sqa/script.jade_savvy_bullfrog.sh
+        container: qc.acc_wave_reserved_skunk
   QC.Doc:
     repos:
-      bitbucket.org/cessda/cessda.cvs.userguide find_doc_files.py:
+      github.com/cessda/cessda.cvs.userguide find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-cornflower-ray.sh
-        container: qc.doc_scaly-plum-bulldog
-      bitbucket.org/cessda/cessda.cvs.userguide git:
+        - /usr/bin/env sh .sqa/script.amethyst_perceptive_macaw.sh
+        container: qc.doc_heather_zealous_dhole
+      github.com/cessda/cessda.cvs.userguide git:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-silver-slug.sh
-        container: qc.doc_wheezy-cinnabar-impala
-      bitbucket.org/cessda/cessda.cvs.userguide markdownlint:
+        - /usr/bin/env sh .sqa/script.arctic_easygoing_kraken.sh
+        container: qc.doc_raspberry_confident_pegasus
+      github.com/cessda/cessda.cvs.userguide markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-zucchini-squirt.sh
-        container: qc.doc_smelly-persimmon-woodlouse
-      bitbucket.org/cessda/cessda.cvs.userguide restructuredtext-lint:
+        - /usr/bin/env sh .sqa/script.gold_organized_nymph.sh
+        container: qc.doc_pumpkin_balanced_dragonfly
+      github.com/cessda/cessda.cvs.userguide restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-puce-zonkey.sh
-        container: qc.doc_clammy-maroon-jackal
+        - /usr/bin/env sh .sqa/script.celadon_imaginative_stingray.sh
+        container: qc.doc_tide_curious_spren
   QC.Lic:
     repos:
-      bitbucket.org/cessda/cessda.cvs.userguide licensee:
+      github.com/cessda/cessda.cvs.userguide licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-olive-hamster.sh
-        container: qc.lic_flabby-rose-coyote
+        - /usr/bin/env sh .sqa/script.coffee_perky_macaw.sh
+        container: qc.lic_prussian_industrious_moth
   QC.Sty:
     repos:
-      bitbucket.org/cessda/cessda.cvs.userguide jsonlint:
+      github.com/cessda/cessda.cvs.userguide jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-mustard-raccoon.sh
-        container: qc.sty_seedy-brass-ladybird
-      bitbucket.org/cessda/cessda.cvs.userguide rubocop:
+        - /usr/bin/env sh .sqa/script.echelon_nurturing_viper.sh
+        container: qc.sty_tundra_forgiving_jackal
+      github.com/cessda/cessda.cvs.userguide rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-peach-otter.sh
-        container: qc.sty_sickly-turquoise-urchin
+        - /usr/bin/env sh .sqa/script.snow_assured_hydra.sh
+        container: qc.sty_fandango_relaxed_goat
   QC.Ver:
     repos:
-      bitbucket.org/cessda/cessda.cvs.userguide get_git_tags.py:
+      github.com/cessda/cessda.cvs.userguide get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-vermilion-bear.sh
-        container: qc.ver_scanty-lilac-cuttlefish
+        - /usr/bin/env sh .sqa/script.orange_dizzy_hornbill.sh
+        container: qc.ver_fern_bubbly_gazelle
 timeout: 5400
